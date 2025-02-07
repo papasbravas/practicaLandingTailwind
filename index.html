@@ -1,13 +1,161 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-    <header>
-        <div class="w-[100] bg-center bg-cover bg-[url(./images/bannerInicio.jpg)] h-[500px]"></div>
-    </header>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+  <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+        --font-secundario: 'Poppins';
+        --font-principal: 'Russo One';
+        --color-algo-100: rgb();
+      }
+      a, h1, h2, h3, h4, h5, h6, button{
+        font-family: var(--font-principal);
+      }
+      p{
+        font-family: var(--font-secundario);
+      }
+      a:hover, button:hover{
+        cursor: url(https://cdn.custom-cursor.com/db/6707/32/super-mario-rosalina-and-luma-pointer.png)   , pointer !important;
+      }
+      body{
+        cursor: url(https://cdn.custom-cursor.com/db/6708/32/super-mario-rosalina-and-luma-cursor.png) , default !important;
+      }
+    </style>
+</head>
+
+<body class="">
+  <header>
+    <nav class="bg-black fixed w-full top-0 left-0 z-50 shadow-lg">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-xl font-extrabold text-yellow-500">
+          <a href="#home">Super Mario Galaxy</a>
+        </div>
+
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div id="menu" class="hidden lg:flex space-x-6 text-lg text-white">
+          <a href="#home" class="hover:text-yellow-500">Inicio</a>
+          <a href="#historia" class="hover:text-yellow-500">Historia</a>
+          <a href="#mecanicas" class="hover:text-yellow-500">Mecánicas</a>
+          <a href="#personajes" class="hover:text-yellow-500">Personajes</a>
+          <a href="#galeria" class="hover:text-yellow-500">Galería</a>
+          <a href="#resennas" class="hover:text-yellow-500">Opiniones</a>
+        </div>
+        <div id="mobile-menu"
+          class="lg:hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-40 hidden">
+          <div class="flex flex-col items-center">
+            <a href="#home" class="text-2xl py-2 text-white hover:text-yellow-500">Inicio</a>
+            <a href="#historia" class="text-2xl py-2 text-white hover:text-yellow-500">Historia</a>
+            <a href="#mecanicas" class="text-2xl py-2 text-white hover:text-yellow-500">Mecánicas</a>
+            <a href="#personajes" class="text-2xl py-2 text-white hover:text-yellow-500">Personajes</a>
+            <a href="#galeria" class="text-2xl py-2 text-white hover:text-yellow-500">Galería</a>
+            <a href="#resennas" class="text-2xl py-2 text-white hover:text-yellow-500">Opiniones</a>
+            <button id="close-menu"
+              class="text-white mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-400 rounded-full">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home"
+      class="min-h-screen flex items-center justify-center bg-center bg-cover bg-[url(./images/banner.webp)]">
+      <div class="text-center">
+        <h1 class="text-black text-4xl font-bold mb-4">Bienvenido a Super Mario Galaxy</h1>
+        <p class="text-white text-lg">Explora el universo y ayuda a Mario a salvar la galaxia.</p>
+      </div>
+    </section>
+
+    <section id="historia" class="w-[75%] mx-auto py-10 px-4 flex items-center flex-col md:flex-row gap-6">
+      <img src="./images/fotoJuego.jpg" class="w-full md:w-1/2 rounded-xl h-[550px] sm:w-[100%] xs:w-1/2" alt="">
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl font-bold text-gray-700">Juego Plataformas</h2>
+        <h2 class="text-4xl font-bold text-gray-700 pt-[10px]">Super Mario Galaxy</h2>
+        <p class="my-6 text-gray-700 text-lg">Super Mario Galaxy es un juego de plataformas donde Mario explora
+          diferentes planetas en el espacio, resolviendo puzzles y superando desafíos para salvar a la Princesa Peach.
+          Destaca por su innovador diseño de gravedad y su jugabilidad única.</p>
+        <div class="sm:w-[100%]">
+          <a href="#comprar">
+            <button
+              class="py-3 px-7 bg-blue-600 rounded-xl tracking-wider text-white text-lg md:mr-[10%] hover:bg-blue-400 cursor-pointer">Comprar</button>
+          </a>
+          <a href="#info">
+            <button
+              class="py-3 px-7 rounded-xl tracking-wider text-black text-lg border-4 border-solid border-blue-600 hover:bg-blue-300">Aprende
+              Más</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="">
+
+    </section>
+
+  </main>
+  <footer class="bg-black text-white py-8 mt-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div>
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Super Mario Galaxy</h2>
+          <p class="text-lg">Vive una experiencia espacial épica con Mario mientras exploras planetas y salvas la
+            galaxia. Un clásico que te hará soñar con las estrellas.</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-yellow-500 mb-4">Enlaces Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-white hover:text-yellow-500">Inicio</a></li>
+            <li><a href="#about" class="text-white hover:text-yellow-500">Historia</a></li>
+            <li><a href="#gameplay" class="text-white hover:text-yellow-500">Mecánicas</a></li>
+            <li><a href="#characters" class="text-white hover:text-yellow-500">Personajes</a></li>
+            <li><a href="#gallery" class="text-white hover:text-yellow-500">Galería</a></li>
+            <li><a href="#reviews" class="text-white hover:text-yellow-500">Opiniones</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-yellow-500 mb-4">Síguenos</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-yellow-500">
+              <img src="./images/instagram.webp" class="w-[100px]" alt="">
+            </a>
+            <a href="#" class="text-white hover:text-yellow-500">
+              <img src="./images/twitter.webp" class="w-[120px]" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  </script>
+</body>
+
 </html>

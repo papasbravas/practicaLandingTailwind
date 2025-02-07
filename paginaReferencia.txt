@@ -1,1 +1,35 @@
 https://landingi.com/es/plantillas/landing-pages/games-entertainment/game-click-through/preview/
+
+Cabecera (Header)
+Contenido: Título del juego (por ejemplo, "Super Mario Galaxy"), una breve frase introductoria o lema que capture la esencia del juego.
+Diseño: Usa un fondo espacial (estilo galaxia, estrellas, planetas) con colores vibrantes como el azul, morado y blanco. Puedes usar el logo del juego (si se permite) o algo inspirado en él.
+Tipografía: Usa Russ One para el título, ya que tiene un estilo más robusto y llamativo que puede resaltar.
+Botones: Puedes incluir botones como "Jugar ahora", "Más información", etc.
+
+Historia/Descripción del juego
+Contenido: Explica brevemente la trama de Super Mario Galaxy (sin entrar en demasiados detalles si es un remake o homenaje). Aquí podrías hablar de Mario y su misión a través de las galaxias, su encuentro con Rosalina, y los principales antagonistas como Bowser.
+Diseño: Fondo de estrellas y planetas. Imágenes del juego (si se permiten).
+Tipografía: Usa Poppins para este texto, ya que es más limpia y fácil de leer para párrafos largos.
+
+Mecánicas del juego
+Contenido: Describe las características del juego: los planetas, los controles, las mecánicas de gravedad, las habilidades especiales de Mario, etc.
+Diseño: Aquí puedes utilizar iconos o pequeños gráficos para representar cada mecánica. Usa colores brillantes para que se vea dinámico.
+Tipografía: Poppins también sería adecuada aquí, para mantener la claridad.
+
+Galería de imágenes o trailer del juego
+Contenido: Imágenes representativas del juego o un trailer corto que muestre la jugabilidad. Aquí es clave mostrar lo visual, como los mundos, los personajes y las batallas contra jefes.
+Diseño: Utiliza un carrusel o una cuadrícula de imágenes. Los colores deben complementar la estética del juego: negros, azules oscuros, purples, y toques de naranja/amarillo (en las estrellas).
+
+Personajes principales
+Contenido: Habla sobre los personajes que más destacan en el juego, como Mario, Luigi, Estela y Bowser. Aquí puedes colocar breves descripciones o incluso un "highlight" visual de cada uno.
+Diseño: Sección con ilustraciones o renders de los personajes en un fondo espacioso.
+Tipografía: Usa Russ One para los nombres de los personajes, y Poppins para la descripción.
+
+Opiniones o testimonios
+Contenido: Si se trata de un remake o una idea no oficial, podrías incluir opiniones de fans sobre el juego o citas de críticas. Esto da autenticidad a la página.
+Diseño: Puedes usar burbujas de texto o cuadros de diálogo con estrellas o puntuaciones visuales.
+Tipografía: Poppins puede dar un toque moderno y profesional.
+
+Llamado a la acción (CTA)
+Contenido: Un llamado a la acción claro, como "Juega ahora", "Descárgalo", "Más información". Si es un proyecto ficticio, puedes incluir algo como "Descubre el universo de Super Mario Galaxy" o "Explora más sobre el juego".
+Diseño: Botones prominentes en colores brillantes (amarillos, rojos o azules) para que resalten.
