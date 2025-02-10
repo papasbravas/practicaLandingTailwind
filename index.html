@@ -1,161 +1,383 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
-  <style type="text/tailwindcss">
-    @theme {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+    />
+    <style type="text/tailwindcss">
+      @theme {
         --color-clifford: #da373d;
-        --font-secundario: 'Poppins';
-        --font-principal: 'Russo One';
+        --font-secundario: "Poppins";
+        --font-principal: "Russo One";
         --color-algo-100: rgb();
       }
-      a, h1, h2, h3, h4, h5, h6, button{
+      a,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      button {
         font-family: var(--font-principal);
       }
-      p{
+      .img-zoom {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .img-zoom:hover {
+        transform: scale(1.1);
+      }
+
+      p {
         font-family: var(--font-secundario);
       }
-      a:hover, button:hover{
-        cursor: url(https://cdn.custom-cursor.com/db/6707/32/super-mario-rosalina-and-luma-pointer.png)   , pointer !important;
+      a:hover,
+      button:hover {
+        cursor: url(https://cdn.custom-cursor.com/db/6707/32/super-mario-rosalina-and-luma-pointer.png),
+          pointer !important;
       }
-      body{
-        cursor: url(https://cdn.custom-cursor.com/db/6708/32/super-mario-rosalina-and-luma-cursor.png) , default !important;
+      body {
+        cursor: url(https://cdn.custom-cursor.com/db/6708/32/super-mario-rosalina-and-luma-cursor.png),
+          default !important;
       }
     </style>
-</head>
+  </head>
 
-<body class="">
-  <header>
-    <nav class="bg-black fixed w-full top-0 left-0 z-50 shadow-lg">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-extrabold text-yellow-500">
-          <a href="#home">Super Mario Galaxy</a>
-        </div>
+  <body class="">
+    <header>
+      <nav class="bg-black fixed w-full top-0 left-0 z-50 shadow-lg">
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <div class="text-xl font-extrabold text-yellow-500">
+            <a href="#home">Super Mario Galaxy</a>
+          </div>
 
-        <div class="lg:hidden flex items-center">
-          <button id="menu-toggle" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 12h18M3 6h18M3 18h18"></path>
-            </svg>
-          </button>
-        </div>
+          <div class="lg:hidden flex items-center">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 12h18M3 6h18M3 18h18"></path>
+              </svg>
+            </button>
+          </div>
 
-        <div id="menu" class="hidden lg:flex space-x-6 text-lg text-white">
-          <a href="#home" class="hover:text-yellow-500">Inicio</a>
-          <a href="#historia" class="hover:text-yellow-500">Historia</a>
-          <a href="#mecanicas" class="hover:text-yellow-500">Mecánicas</a>
-          <a href="#personajes" class="hover:text-yellow-500">Personajes</a>
-          <a href="#galeria" class="hover:text-yellow-500">Galería</a>
-          <a href="#resennas" class="hover:text-yellow-500">Opiniones</a>
+          <div id="menu" class="hidden lg:flex space-x-6 text-lg text-white">
+            <a href="#home" class="hover:text-yellow-500">Inicio</a>
+            <a href="#info" class="hover:text-yellow-500">Información</a>
+            <a href="#mecanicas" class="hover:text-yellow-500">Mecánicas</a>
+            <a href="#personajes" class="hover:text-yellow-500">Personajes</a>
+            <a href="#galeria" class="hover:text-yellow-500">Galería</a>
+            <a href="#resennas" class="hover:text-yellow-500">Opiniones</a>
+          </div>
+          <div
+            id="mobile-menu"
+            class="lg:hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-40 hidden"
+          >
+            <div class="flex flex-col items-center">
+              <a
+                href="#home"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Inicio</a
+              >
+              <a
+                href="#info"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Información</a
+              >
+              <a
+                href="#mecanicas"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Mecánicas</a
+              >
+              <a
+                href="#personajes"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Personajes</a
+              >
+              <a
+                href="#galeria"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Galería</a
+              >
+              <a
+                href="#resennas"
+                class="text-2xl py-2 text-white hover:text-yellow-500"
+                >Opiniones</a
+              >
+              <button
+                id="close-menu"
+                class="text-white mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-400 rounded-full"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
         </div>
-        <div id="mobile-menu"
-          class="lg:hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-40 hidden">
-          <div class="flex flex-col items-center">
-            <a href="#home" class="text-2xl py-2 text-white hover:text-yellow-500">Inicio</a>
-            <a href="#historia" class="text-2xl py-2 text-white hover:text-yellow-500">Historia</a>
-            <a href="#mecanicas" class="text-2xl py-2 text-white hover:text-yellow-500">Mecánicas</a>
-            <a href="#personajes" class="text-2xl py-2 text-white hover:text-yellow-500">Personajes</a>
-            <a href="#galeria" class="text-2xl py-2 text-white hover:text-yellow-500">Galería</a>
-            <a href="#resennas" class="text-2xl py-2 text-white hover:text-yellow-500">Opiniones</a>
-            <button id="close-menu"
-              class="text-white mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-400 rounded-full">Cerrar</button>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="min-h-screen flex items-center justify-center bg-center bg-cover bg-[url(./images/banner.webp)]"
+      >
+        <div class="text-center">
+          <h1 class="text-black text-4xl font-bold mb-4">
+            Bienvenido a Super Mario Galaxy
+          </h1>
+          <p class="text-white text-lg">
+            Explora el universo y ayuda a Mario a salvar la galaxia.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="info"
+        class="w-[75%] mx-auto py-10 px-4 flex items-center flex-col md:flex-row gap-6"
+      >
+        <img
+          src="./images/fotoJuego.jpg"
+          class="w-full md:w-1/2 rounded-xl h-[550px] sm:w-[100%] xs:w-1/2"
+          alt=""
+        />
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl font-bold text-gray-700">Juego Plataformas</h2>
+          <h2 class="text-4xl font-bold text-gray-700 pt-[10px]">
+            Super Mario Galaxy
+          </h2>
+          <p class="my-6 text-gray-700 text-lg">
+            Super Mario Galaxy es un juego de plataformas donde Mario explora
+            diferentes planetas en el espacio, resolviendo puzzles y superando
+            desafíos para salvar a la Princesa Peach. Destaca por su innovador
+            diseño de gravedad y su jugabilidad única.
+          </p>
+          <div class="sm:w-[100%]">
+            <a href="#comprar">
+              <button
+                class="py-3 px-7 bg-blue-600 rounded-xl tracking-wider text-white text-lg md:mr-[10%] hover:bg-blue-400 cursor-pointer"
+              >
+                Comprar
+              </button>
+            </a>
+            <a href="#info">
+              <button
+                class="py-3 px-7 rounded-xl tracking-wider text-black text-lg border-4 border-solid border-blue-600 hover:bg-blue-300"
+              >
+                Aprende Más
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arreglar imagenes -->
+      <section
+        id="mecanicas"
+        class="mx-auto min-h-[100%] px-4 py-20 bg-center bg-cover bg-[url(./images/galaxia.png)] flex justify-center items-center"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-semibold text-blue-600">
+              Gravedad y Planetas Flotantes
+            </h2>
+            <p class="text-gray-700 mt-4">
+              Explora cómo la gravedad afecta los planetas, lo que permite a
+              Mario caminar sobre paredes y techos, y saltar entre planetas.
+            </p>
+            <img
+              src="./images/planetas.webp"
+              class="w-full pt-5 rounded-xl h-[250px] img-zoom"
+              alt=""
+            />
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-semibold text-blue-600">
+              Movimiento de Mario
+            </h2>
+            <p class="text-gray-700 mt-4">
+              Mario tiene una variedad de movimientos especiales, como saltos
+              acrobáticos y giros, que le permiten superar obstáculos y
+              enemigos.
+            </p>
+            <img
+              src="./images/marioVolando.gif"
+              class="w-full pt-5 rounded-xl h-[250px] img-zoom"
+              alt=""
+            />
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-semibold text-blue-600">
+              Objetos y Power-Ups
+            </h2>
+            <p class="text-gray-700 mt-4">
+              Descubre los power-ups clásicos de Mario, como la Super Estrella,
+              Champiñón Boo, Champiñón Abeja o el Champiñón Roca que otorgan
+              habilidades únicas para Mario.
+            </p>
+            <img
+              src="./images/powerups.jpg"
+              class="w-full pt-5 rounded-xl h-[250px] img-zoom"
+              alt=""
+            />
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-semibold text-blue-600">
+              Movimentos de la camara
+            </h2>
+            <p class="text-gray-700 mt-4">
+              La cámara en Super Mario Galaxy está diseñada para seguir al jugador de manera fluida, permitiendo una experiencia de exploración 3D sin ser demasiado confusa. Los jugadores pueden ajustar la vista utilizando los controles del Wii Remote y el Nunchuk, lo que proporciona una mayor libertad para observar el entorno. 
+            </p>
+            <img
+              src="./images/camara.jpeg"
+              class="w-full pt-5 rounded-xl h-[250px] img-zoom"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="personajes" class="w-[80%] flex justify-center items-center mx-auto py-10">
+        <!-- <h2 class="text-4xl text-gray-700">Personajes</h2> -->
+        <div class="text-center">
+          <h2 class="text-3xl text-gray-700">Estela</h2>
+          <p class="text-gray-700 text-lg">Estela (en inglés Rosalina) es un personaje de la saga de Super Mario, que debutó en Super Mario Galaxy (2007) para la consola Nintendo Wii. Ella es una figura clave en el juego y, a partir de ese momento, ha aparecido en varios títulos de la franquicia. Estela tiene una personalidad misteriosa y sabiduría cósmica, siendo una figura maternal que guía a Mario en su aventura para rescatar a la Princesa Peach.</p>
+          <div class="flex md:w-full py-10 gap-6">
+            <div class="md:w-1/2">
+              <h2 class="text-2xl text-gray-700">Apariencia</h2>
+              <p class="text-gray-700 text-lg">Estela es una mujer alta, de piel clara, con un vestido largo de color azul celeste. Su cabello es rubio y tiene una tiara en la cabeza. Ella siempre se representa como una figura serena, con una actitud tranquila y sabia. A menudo se la muestra flotando en el aire, como si estuviera en sintonía con las estrellas y el universo.</p>
+              <img src="./images/estela.webp" class="w-full md:w-1/2 rounded-xl h-[350px] sm:w-[100%] xs:w-1/2" alt="">
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-2xl text-gray-700">Poderes</h2>
+              <p class="text-gray-700 text-lg">Estela tiene una conexión profunda con el espacio y las estrellas, lo que le otorga habilidades especiales. Puede controlar el poder de las Power Stars y tiene la capacidad de moverse a través del espacio y de las galaxias. Además, posee una nave espacial llamada "Comet Observatory", que usa para viajar entre las galaxias y ayudar a Mario en su misión.</p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="historia" class="flex justify-center items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+          <div>
+            <img src="./images/marioVolando.gif" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black text-white py-8 mt-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold text-yellow-500 mb-4">
+              Super Mario Galaxy
+            </h2>
+            <p class="text-lg">
+              Vive una experiencia espacial épica con Mario mientras exploras
+              planetas y salvas la galaxia. Un clásico que te hará soñar con las
+              estrellas.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-yellow-500 mb-4">
+              Enlaces Rápidos
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-white hover:text-yellow-500"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#info" class="text-white hover:text-yellow-500"
+                  >Información</a
+                >
+              </li>
+              <li>
+                <a href="#mecanicas" class="text-white hover:text-yellow-500"
+                  >Mecánicas</a
+                >
+              </li>
+              <li>
+                <a href="#personajes" class="text-white hover:text-yellow-500"
+                  >Personajes</a
+                >
+              </li>
+              <li>
+                <a href="#galeria" class="text-white hover:text-yellow-500"
+                  >Galería</a
+                >
+              </li>
+              <li>
+                <a href="#resennas" class="text-white hover:text-yellow-500"
+                  >Opiniones</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-yellow-500 mb-4">Síguenos</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-yellow-500">
+                <img src="./images/instagram.webp" class="w-[100px]" alt="" />
+              </a>
+              <a href="#" class="text-white hover:text-yellow-500">
+                <img src="./images/twitter.webp" class="w-[120px]" alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-  </header>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
 
-  <main>
-    <section id="home"
-      class="min-h-screen flex items-center justify-center bg-center bg-cover bg-[url(./images/banner.webp)]">
-      <div class="text-center">
-        <h1 class="text-black text-4xl font-bold mb-4">Bienvenido a Super Mario Galaxy</h1>
-        <p class="text-white text-lg">Explora el universo y ayuda a Mario a salvar la galaxia.</p>
-      </div>
-    </section>
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-    <section id="historia" class="w-[75%] mx-auto py-10 px-4 flex items-center flex-col md:flex-row gap-6">
-      <img src="./images/fotoJuego.jpg" class="w-full md:w-1/2 rounded-xl h-[550px] sm:w-[100%] xs:w-1/2" alt="">
-      <div class="text-center md:text-left">
-        <h2 class="text-2xl font-bold text-gray-700">Juego Plataformas</h2>
-        <h2 class="text-4xl font-bold text-gray-700 pt-[10px]">Super Mario Galaxy</h2>
-        <p class="my-6 text-gray-700 text-lg">Super Mario Galaxy es un juego de plataformas donde Mario explora
-          diferentes planetas en el espacio, resolviendo puzzles y superando desafíos para salvar a la Princesa Peach.
-          Destaca por su innovador diseño de gravedad y su jugabilidad única.</p>
-        <div class="sm:w-[100%]">
-          <a href="#comprar">
-            <button
-              class="py-3 px-7 bg-blue-600 rounded-xl tracking-wider text-white text-lg md:mr-[10%] hover:bg-blue-400 cursor-pointer">Comprar</button>
-          </a>
-          <a href="#info">
-            <button
-              class="py-3 px-7 rounded-xl tracking-wider text-black text-lg border-4 border-solid border-blue-600 hover:bg-blue-300">Aprende
-              Más</button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="">
-
-    </section>
-
-  </main>
-  <footer class="bg-black text-white py-8 mt-8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <div>
-          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Super Mario Galaxy</h2>
-          <p class="text-lg">Vive una experiencia espacial épica con Mario mientras exploras planetas y salvas la
-            galaxia. Un clásico que te hará soñar con las estrellas.</p>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-bold text-yellow-500 mb-4">Enlaces Rápidos</h3>
-          <ul class="space-y-2">
-            <li><a href="#home" class="text-white hover:text-yellow-500">Inicio</a></li>
-            <li><a href="#about" class="text-white hover:text-yellow-500">Historia</a></li>
-            <li><a href="#gameplay" class="text-white hover:text-yellow-500">Mecánicas</a></li>
-            <li><a href="#characters" class="text-white hover:text-yellow-500">Personajes</a></li>
-            <li><a href="#gallery" class="text-white hover:text-yellow-500">Galería</a></li>
-            <li><a href="#reviews" class="text-white hover:text-yellow-500">Opiniones</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-bold text-yellow-500 mb-4">Síguenos</h3>
-          <div class="flex space-x-4">
-            <a href="#" class="text-white hover:text-yellow-500">
-              <img src="./images/instagram.webp" class="w-[100px]" alt="">
-            </a>
-            <a href="#" class="text-white hover:text-yellow-500">
-              <img src="./images/twitter.webp" class="w-[120px]" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenu = document.getElementById('close-menu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  </script>
-</body>
-
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
 </html>
