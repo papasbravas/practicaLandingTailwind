@@ -83,7 +83,6 @@
           <a href="#personajes" class="hover:text-yellow-500">Personajes</a>
           <a href="#historia" class="hover:text-yellow-500">Historia</a>
           <a href="#galeria" class="hover:text-yellow-500">Galería</a>
-          <a href="#video" class="hover:text-yellow-500">Trailer</a>
           <a href="#resennas" class="hover:text-yellow-500">Opiniones</a>
         </div>
         <div id="mobile-menu"
@@ -95,7 +94,6 @@
             <a href="#personajes" class="text-2xl py-2 text-white hover:text-yellow-500">Personajes</a>
             <a href="#historia" class="text-2xl py-2 text-white hover:text-yellow-500">Historia</a>
             <a href="#galeria" class="text-2xl py-2 text-white hover:text-yellow-500">Galería</a>
-            <a href="#video" class="text-2xl py-2 text-white hover:text-yellow-500">Trailer</a>
             <a href="#resennas" class="text-2xl py-2 text-white hover:text-yellow-500">Opiniones</a>
             <button id="close-menu" class="text-white mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-400 rounded-full">
               Cerrar
@@ -294,7 +292,7 @@
 
     <!-- Arreglar imagenes -->
     <section id="historia" class="mx-auto w-[80%] flex justify-center items-center py-20">
-      <div class="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-4 gap-4 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
         <div class="col-span-2 col-start-2">
           <h2 class="text-black text-4xl font-bold">Historia</h2>
         </div>
@@ -304,11 +302,7 @@
             alt="">
         </div>
         <div class="col-span-2 row-span-2 row-start-2 flex items-center flex-col justify-center">
-          <p class="text-gray-700 text-lg">La historia de Super Mario Galaxy sigue la estructura clásica de Mario
-            luchando contra Bowser para rescatar a la Princesa Peach, pero esta vez, el escenario cambia radicalmente.
-            Al inicio del juego, Mario asiste a un festival en honor a la Princesa Peach, quien es secuestrada por
-            Bowser. Sin embargo, lo interesante de la historia es que el villano no solo la captura, sino que también la
-            lleva a través del espacio, utilizando una nave espacial que ha secuestrado estrellas y galaxias enteras.
+          <p class="text-gray-700 text-lg">La historia de Super Mario Galaxy sigue la estructura clásica de Mario luchando contra Bowser para rescatar a la Princesa Peach, pero esta vez, el escenario cambia radicalmente. Al inicio del juego, Mario asiste a un festival en honor a la Princesa Peach, quien es secuestrada por Bowser. Sin embargo, lo interesante de la historia es que el villano no solo la captura, sino que también la lleva a través del espacio, utilizando una nave espacial que ha secuestrado estrellas y galaxias enteras.
           </p>
           <button id="abrirModal"
             class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
@@ -324,11 +318,7 @@
       <div id="miModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
         <div class="bg-white p-6 rounded-lg shadow-lg w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%]">
           <h2 class="text-2xl font-semibold mb-4">Más sobre la historia</h2>
-          <p class="text-gray-700">A lo largo del juego, Mario viaja a través de diferentes planetas y galaxias con la
-            ayuda de un personaje nuevo, la estrella Destello, que es la guía de Mario en su travesía. Los Destellos son
-            criaturas estelares que pueden ser utilizadas para interactuar con los diferentes elementos del juego y
-            tienen una relación especial con Estela, una misteriosa figura central en la narrativa. Esta historia se
-            convierte en una aventura cósmica que tiene muchas sorpresas y giros.</p>
+          <p class="text-gray-700">A lo largo del juego, Mario viaja a través de diferentes planetas y galaxias con la ayuda de un personaje nuevo, la estrella Destello, que es la guía de Mario en su travesía. Los Destellos son criaturas estelares que pueden ser utilizadas para interactuar con los diferentes elementos del juego y tienen una relación especial con Estela, una misteriosa figura central en la narrativa. Esta historia se convierte en una aventura cósmica que tiene muchas sorpresas y giros.</p>
           <button id="cerrarModal"
             class="mt-4 px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
             Cerrar
@@ -340,7 +330,7 @@
     <section id="galeria">
       <div class="w-full relative text-center">
         <h2 class="text-black text-4xl font-bold mb-4">Galería de imágenes</h2>
-        <div class="swiper default-carousel swiper-container w-[70%]">
+        <div class="swiper default-carousel swiper-container w-[70%] md:w-[80%]">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="bg-indigo-50 rounded-2xl h-[800px] flex justify-center items-center">
@@ -406,18 +396,6 @@
 
     </section>
 
-    <!-- Arreglar video -->
-    <!-- <section id="video" class="w-[85%] flex justify-center items-center mx-auto py-10 text-center">
-      <div class="grid grid-cols-4 gap-4">
-        <div class="col-start-2 col-end-4">
-          <h2 class="text-black text-4xl font-bold">El trailer del juego</h2>
-        </div>
-        <div class="md:col-start-1 col-start-2  row-start-3 mx-auto">
-          <iframe src="https://www.youtube.com/embed/qA0vLrwuQHE?si=wFW7wg2OWEqgWg6-" title="Trailer Super Mario Galaxy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="aspect-video lg:w-[800px] lg:h-[500px]"></iframe>
-        </div>
-      </div>
-    </section> -->
-
     <section id="resennas" class="w-[90%] mx-auto justify-center items-center pt-[3%] text-center">
       <div class="pb-[2%]">
         <h2 class="text-black text-4xl font-bold">Reseñas</h2>
@@ -471,9 +449,6 @@
             </li>
             <li>
               <a href="#galeria" class="text-white hover:text-yellow-500">Galería</a>
-            </li>
-            <li>
-              <a href="#video" class="text-white hover:text-yellow-500">Trailer</a>
             </li>
             <li>
               <a href="#resennas" class="text-white hover:text-yellow-500">Opiniones</a>
